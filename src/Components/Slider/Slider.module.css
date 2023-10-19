@@ -1,0 +1,56 @@
+.container {
+    width:50%;
+    margin: 0 auto ;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    width: 60px;
+    min-width: 60px;
+}
+
+input[type="range"] {
+    width: 100%;
+    /* Set the track color to black */
+    background: black;
+    /* Remove the default track border */
+    border: none;
+    /* Set the track height */
+    height: 14px;
+    /* Adjust other properties as needed */
+  }
+  
+  /* Styling for the slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    /* Set the thumb color to black for WebKit browsers (e.g., Chrome) */
+    background: black;
+    /* Set the thumb size */
+    width: 16px;
+    height: 16px;
+    /* Add a border or other styles as desired */
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    /* Set the thumb color to black for Firefox */
+    background: black;
+    /* Set the thumb size */
+    width: 16px;
+    height: 16px;
+    /* Add a border or other styles as desired */
+  }
+
+label {
+    width: 60px;
+}
+
+@media (max-width: 768px) {
+    /* Styles for screens up to 768 pixels */
+    /* Mobile devices or smaller screens */
+  
+    .container {
+      width: 90%;
+    }
+  }

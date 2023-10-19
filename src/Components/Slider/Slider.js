@@ -1,3 +1,6 @@
+import styles from './Slider.module.css'
+
+
 function Slider({scale, value, setTemperature}) {  
     function handleTemperatureChange(event) {
         const currentScale = event.target.id
@@ -37,10 +40,10 @@ function Slider({scale, value, setTemperature}) {
     }
 
     return (
-      <div style={{width:'50%', margin: '0 auto', display: 'flex', gap: '16px', justifyContent: 'space-between', alignItems: 'center'}}>
-        <h2 style={{width:'60px'}}>{value}</h2>
-        <input style={{width:'100%'}} className="" type="range" id={scale} name={`${scale}-temperature`} min="-130" max="140" value={value} onChange={event=>handleTemperatureChange(event)}/>
-        <label style={{width:'80px'}} htmlFor="volume" >{scale}</label>
+      <div className={styles.container}>
+        <h2>{value}</h2>
+        <input type="range" id={scale} name={`${scale}-temperature`} min="-130" max="140" value={value} onChange={event=>handleTemperatureChange(event)}/>
+        <label htmlFor="volume" >{(scale === 'celsius') ? 'C°' : 'F°' }</label>
       </div>
     );
   }
