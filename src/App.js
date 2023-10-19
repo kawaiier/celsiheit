@@ -9,14 +9,19 @@ function App() {
   ])
 
   return (
-    <main style={{position:'absolute', top:'45%', transform:'translateY(-50%)', width: '100%'}}>
+    <>
+    <main >
       <h1>CELSI<span>HEIT</span></h1>
       <p>C to F and F to C visual converter</p>
         {temperature.map((item, id) => (
           <Slider scale={item.scale} value={item.value} setTemperature={setTemperature} key={id} />
         ))}
-      <p className="footer">Made with ReactJS by <a href="http://www.github.com/kawaiier" target="_blank">kawaiier</a></p>
     </main>
+    <footer>
+      <p>made with React by <a href="http://www.github.com/kawaiier" target="_blank">kawaiier</a></p>
+      <p className="source"><a href="https://github.com/kawaiier/celsiheit" target="_blank">source code on GitHub</a></p>
+    </footer>
+    </>
   );
 }
 
