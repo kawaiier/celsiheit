@@ -10,18 +10,20 @@ function Slider({scale, value, setTemperature}) {
         let newFarenheit = 0
         if (currentScale === 'celsius') {
             newCelsius = currentValue
-            newFarenheit = newCelsius*9/5+32
-            newTemperature = [
-              {
-                scale: "celsius",
-                value: newCelsius,
-              },
-              {
-                scale: "farenheit",
-                value: Math.round(newFarenheit),
-              },
-            ];
-            setTemperature(newTemperature)
+            if (newCelsius <= 60 && newCelsius>=-90){
+              newFarenheit = newCelsius*9/5+32
+              newTemperature = [
+                {
+                  scale: "celsius",
+                  value: newCelsius,
+                },
+                {
+                  scale: "farenheit",
+                  value: Math.round(newFarenheit),
+                },
+              ];
+              setTemperature(newTemperature)
+            } 
         } else if (currentScale === 'farenheit') {
           newFarenheit = currentValue
           newCelsius = (newFarenheit-32)/1.8

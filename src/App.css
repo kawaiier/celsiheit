@@ -1,0 +1,23 @@
+h1, p {
+    text-align: center;
+}
+
+span, a {
+    color: white;
+    background-color: black;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer {
+    padding-top: 200px;
+}
