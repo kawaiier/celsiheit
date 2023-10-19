@@ -37,13 +37,12 @@ function Slider({scale, value, setTemperature}) {
     }
 
     return (
-      <div className="px-16">
-        <h2 className="text-center text-2xl">{value}</h2>
-        <input className="w-full" type="range" id={scale} name={`${scale}-temperature`} min="-130" max="140" value={value} onChange={event=>handleTemperatureChange(event)}/>
-        <label htmlFor="volume">{scale}</label>
+      <div style={{width:'50%', margin: '0 auto', display: 'flex', gap: '16px', justifyContent: 'space-between', alignItems: 'center'}}>
+        <h2 style={{width:'60px'}}>{value}</h2>
+        <input style={{width:'100%'}} className="" type="range" id={scale} name={`${scale}-temperature`} min="-130" max="140" value={value} onChange={event=>handleTemperatureChange(event)}/>
+        <label style={{width:'80px'}} htmlFor="volume" >{scale}</label>
       </div>
     );
   }
   
   export default Slider;
-  
